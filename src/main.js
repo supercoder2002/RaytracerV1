@@ -480,7 +480,9 @@ async function computeRayTracing() {
 	device.queue.submit([commandBuffer]);
 
 	// getting results from shader
+	fpsDisplay.innerText = "FPS: 0.14";
 	await colorOutputBuffer.mapAsync(GPUMapMode.READ);
+	fpsDisplay.innerText = "FPS: 0.12234";
 	const output = new Float32Array(colorOutputBuffer.getMappedRange().slice());
 	colorOutputBuffer.unmap();
 	if (Math.round(runTime) % 7 == 0) {
@@ -536,5 +538,4 @@ async function main() {
 
 var startTime = Date.now();
 var endTime = Date.now();
-fpsDisplay.innerText = "FPS: 0.12234";
 main();
