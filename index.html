@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<style>
+			h1 {
+				color: white; 
+				font-family: Verdana, Helvetica, sans-serif;
+				flex: 1 0 50px;
+				text-align: center;
+			}
+		</style>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Pathtracing</title>
+	</head>
+	<body style="background-color:black;">
+		<canvas id="pathTracerDisplay"></canvas>
+		<div style="display: flex;">
+			<h1 id="frameDisplay">Frame: 0</h1>
+			<h1 id="fpsDisplay">FPS: 60</h1>
+			<h1 id="timeDisplay">Runtime: 0s</h1>
+		</div>
+		<script src="/src/shaders.js" type="module"></script>
+		<script src="/src/main.js" type="module"></script>
+	</body>
+</html>
