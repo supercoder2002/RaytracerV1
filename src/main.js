@@ -482,14 +482,14 @@ async function computeRayTracing() {
 	// getting results from shader
 	fpsDisplay.innerText = "FPS: 0.14";
 	await colorOutputBuffer.mapAsync(GPUMapMode.READ);
-	fpsDisplay.innerText = "FPS: 0.12234";
+	fpsDisplay.innerText = "FPS: " + frameNumber;
 	const output = new Float32Array(colorOutputBuffer.getMappedRange().slice());
 	colorOutputBuffer.unmap();
-	if (Math.round(runTime) % 7 == 0) {
-		await bOutputBuffer.mapAsync(GPUMapMode.READ);
-		console.log(new Float32Array(bOutputBuffer.getMappedRange().slice())[0]);
-		bOutputBuffer.unmap();
-	}
+	// if (Math.round(runTime) % 7 == 0) {
+	// 	await bOutputBuffer.mapAsync(GPUMapMode.READ);
+	// 	console.log(new Float32Array(bOutputBuffer.getMappedRange().slice())[0]);
+	// 	bOutputBuffer.unmap();
+	// }
 
 	return output;
 }
