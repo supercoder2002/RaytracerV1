@@ -6,6 +6,8 @@ let frameDisplay = document.getElementById("frameDisplay");
 let fpsDisplay = document.getElementById("fpsDisplay");
 let timeDisplay = document.getElementById("timeDisplay");
 
+fpsDisplay.innerText = "FPS: 0.12234";
+
 canvas.width = Math.floor(window.innerWidth / 16) * 16;
 canvas.height = Math.floor(window.innerHeight / 16) * 16;
 console.log(canvas.width)
